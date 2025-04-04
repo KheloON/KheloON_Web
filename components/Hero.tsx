@@ -5,19 +5,7 @@ import Button from './Button'
 
 const Hero = () => {
   const handleDownload = () => {
-    fetch('/api/download')
-      .then(response => response.blob())
-      .then(blob => {
-        const url = window.URL.createObjectURL(blob);
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = 'Khelo_APK.apk';
-        document.body.appendChild(a);
-        a.click();
-        window.URL.revokeObjectURL(url);
-        document.body.removeChild(a);
-      })
-      .catch(error => console.error('Download failed:', error));
+    window.location.href = 'https://www.upload-apk.com/X8bNqFoK6z1F4mJ';
   };
 
   return (
