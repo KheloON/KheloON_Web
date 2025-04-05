@@ -441,43 +441,11 @@ const App: React.FC = () => {
         />
       )}
       {showAppDownloadModal && <AppDownloadModal onClose={closeModals} />}
-      <GlobalStyles />
+
     </div>
   );
 };
 
-const GlobalStyles = () => (
-  <style jsx global>{`
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-    @keyframes slideUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-    @keyframes pulse {
-      0% { transform: scale(0.8); }
-      50% { transform: scale(1.1); }
-      100% { transform: scale(1); }
-    }
-    @keyframes float {
-      0% { transform: translateY(0) rotate(0deg); }
-      50% { transform: translateY(-20px) rotate(5deg); }
-      100% { transform: translateY(0) rotate(0deg); }
-    }
-    input[type="number"]::-webkit-inner-spin-button,
-    input[type="number"]::-webkit-outer-spin-button {
-      -webkit-appearance: none;
-      margin: 0;
-    }
-  `}</style>
-);
+import '../styles/animations.css';
 
 export default App;
